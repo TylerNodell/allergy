@@ -1,0 +1,12 @@
+
+<h1>Recipe List </h1>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+  <li>
+    <%= link_to "Recipe Name: #{recipe.name}, User Name: #{recipe.user_name}", recipe_path(recipe) %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create New Recipe", new_recipe_path %>
